@@ -6,4 +6,4 @@ Tools used in this project
 
 - React
 - Next.js
-- Mui Material-ui
+- Tailwind
