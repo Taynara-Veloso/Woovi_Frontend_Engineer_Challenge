@@ -1,4 +1,5 @@
 import * as React from 'react';
+import Image from "next/image";
 import Box from '@mui/material/Box';
 import Icon from '@mui/material/Icon';
 import Stack from '@mui/material/Stack';
@@ -9,6 +10,7 @@ import Typography from '@mui/material/Typography';
 import FormControl from '@mui/material/FormControl';
 import CircleOutlinedIcon from '@mui/icons-material/CircleOutlined';
 import CheckCircleRoundedIcon from '@mui/icons-material/CheckCircleRounded';
+import ExpandLessRoundedIcon from '@mui/icons-material/ExpandLessRounded';
 
 export default function CreditCard() {
 
@@ -61,6 +63,42 @@ export default function CreditCard() {
             </Stack>
           </Stack>
         </Box>
+        <Box className="pt-10">
+          <Divider style={{ background: '#E5E5E5', border: '#E5E5E5' }} className="w-full h-1 rounded"></Divider>
+        </Box>
+        <Box className="flex justify-between">
+          <Typography style={{ color: '#4D4D4D' }} variant="body1" className="font-semibold">CET: 0,5%</Typography>
+          <Typography style={{ color: '#4D4D4D' }} variant="body1" className="font-semibold">Total: R$ 31.500,00</Typography>
+        </Box>
+        <Divider style={{ background: '#E5E5E5', border: '#E5E5E5' }} className="w-full h-1 rounded"></Divider>
+        <Box className="flex justify-between">
+          <Typography style={{ color: '#4D4D4D' }} variant="body1" className="font-extrabold">Como funciona?</Typography>
+          <Icon style={{ color: '#4D4D4D' }}><ExpandLessRoundedIcon className="align-baseline" /></Icon>
+        </Box>
+        <Divider style={{ background: '#E5E5E5', border: '#E5E5E5' }} className="w-full h-1 rounded"></Divider>
+        <Box className="pb-3">
+          <Typography style={{ color: '#B2B2B2' }} variant="body1" className="flex flex-col items-center ">
+            Identificador:
+            <strong className="text-gray-700">2c1b951f356c4680b13ba1c9fc889c47</strong>
+          </Typography>
+        </Box>
+        <footer className="flex justify-center pb-16 space-x-1 items-center">
+          <Image
+            src="/icon-security.svg"
+            alt="icone seguro"
+            width={16}
+            height={18}
+          />
+          <Typography variant="body1" style={{ color: '#B2B2B2' }}>
+            Pagamento 100% seguro via:
+          </Typography>
+          <Image
+            src="/Logo-Woovi-Gray.svg"
+            alt="logo da empresa woovi"
+            width={57}
+            height={17}
+          />
+        </footer>
       </Box>
     </div>
   )
