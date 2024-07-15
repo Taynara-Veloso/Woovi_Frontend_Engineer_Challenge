@@ -1,6 +1,6 @@
 # Woovi Challenge 
 
-Este projeto é um desafio de frontend proposto pela Woovi  
+This project is a frontend challenge proposed by Woovi 
 
 Tools used in this project
 
