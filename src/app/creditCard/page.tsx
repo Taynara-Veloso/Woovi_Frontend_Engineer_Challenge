@@ -11,6 +11,31 @@ import FormControl from '@mui/material/FormControl';
 import CircleOutlinedIcon from '@mui/icons-material/CircleOutlined';
 import CheckCircleRoundedIcon from '@mui/icons-material/CheckCircleRounded';
 import ExpandLessRoundedIcon from '@mui/icons-material/ExpandLessRounded';
+import MenuItem from '@mui/material/MenuItem';
+
+const parcels = [
+  {
+    label: '1x R$ 30.500,00',
+  },
+  {
+    label: '2x R$ 15.300,00',
+  },
+  {
+    label: '3x R$ 10.196,66',
+  },
+  {
+    label: '4x R$ 7.725,00',
+  },
+  {
+    label: '5x R$ 6.300,00',
+  },
+  {
+    label: '6x R$ 5.283,33',
+  },
+  {
+    label: '7x R$ 4.542,85',
+  },
+];
 
 export default function CreditCard() {
 
@@ -37,7 +62,13 @@ export default function CreditCard() {
             id="outlined-select-currency"
             select
             label="Parcelas"
-          />
+          >
+            {parcels.map((amount) => (
+              <MenuItem key={amount.label} >
+                {amount.label}
+              </MenuItem>
+            ))}
+          </TextField>
         </FormControl>
         <Button variant="contained" className="w-full h-10 bg-blue-900 normal-case">Pagar</Button>
         <Box className="flex justify-center items-center px-10 my-6">
