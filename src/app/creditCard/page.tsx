@@ -113,23 +113,6 @@ export default function CreditCard() {
             <strong className="text-gray-700">2c1b951f356c4680b13ba1c9fc889c47</strong>
           </Typography>
         </Box>
-        <footer className="flex justify-center pb-16 space-x-1 items-center">
-          <Image
-            src="/icon-security.svg"
-            alt="icone seguro"
-            width={16}
-            height={18}
-          />
-          <Typography variant="body1" style={{ color: '#B2B2B2' }}>
-            Pagamento 100% seguro via:
-          </Typography>
-          <Image
-            src="/Logo-Woovi-Gray.svg"
-            alt="logo da empresa woovi"
-            width={57}
-            height={17}
-          />
-        </footer>
       </Box>
     </div>
   )

@@ -30,22 +30,23 @@ export default function PaymentMethod() {
   }
 
   return (
-    <Box>
-      <Box className="space-y-8">
-        <Box className="flex justify-center items-center">
-          <h1 className="font-extrabold text-2xl text-center">
-            João, como você quer pagar?
-          </h1>
-        </Box>
-          
-        <Box className="space-y-8">
-          <Box className="relative space-y-40 h-svh">
+    <Box className="w-[500px] min-h-screen mb-16 flex flex-col mx-auto space-y-8">
+      <Box className="flex justify-center items-center">
+        <h1 className="font-extrabold text-2xl text-center">
+          João, como você quer pagar?
+        </h1>
+      </Box>
+        
+      <Box className="relative">
+        <Box>
+          <Box className="flex justify-center space-y-40">
             <Box className="flex justify-center">
-              <Box className="flex w-2/3">
-                <Box className="flex justify-center items-center bg-[#E5E5E5] rounded-full absolute z-10 px-5 h-7 l -top-3 font-bold">Pix</Box>
+              <Box sx={{
+                width: 330,
+              }}>
+                <Box className="flex items-center bg-[#E5E5E5] rounded-full absolute z-10 px-5 h-7 -top-3 font-bold">Pix</Box>
               </Box>
-            
-              <Box className="flex absolute border-2 border-[#E5E5E5] rounded-xl w-4/5 h-32">
+              <Box className="flex absolute border-2 border-[#E5E5E5] hover:border-2 hover:border-green-500 hover:bg-green-50 rounded-xl w-4/5 h-32">
                 <Box className="flex-col w-full p-5">
                   <Box className="absolute right-2 top-3">
                     {isOpenOption ? (
@@ -88,9 +89,58 @@ export default function PaymentMethod() {
                 </Box>
               </Box>
             </Box>
-          </Box>  
+            <Box
+              className="absolute z-0 w-4/5"
+            >
+              <Box sx={{
+                  marginLeft: 4.4,
+                }}
+              >
+                <Box className="flex items-center bg-[#E5E5E5] rounded-full absolute z-10 px-5 h-7 -top-3 font-bold">Pix Parcelado</Box>
+              </Box>
+              <ButtonGroup orientation="vertical" aria-label="Vertical button group" 
+              className="w-full"
+              >
+                <Button className="flex flex-col items-start min-h-20 pt-5 rounded-xl border-2 border-[#E5E5E5] hover:border-2 hover:border-green-500 hover:bg-green-50">
+                  <Typography variant="body1" className="text-[#4D4D4D]"><strong>2x</strong> R$ 15.300,00</Typography> 
+                  <Typography variant="subtitle2" className="text-[#AFAFAF]">Total: R$ 30.600,00</Typography> 
+                </Button>
+                <Button className="flex flex-col items-start min-h-20 border-2 border-[#E5E5E5] hover:border-2 hover:border-green-500 hover:bg-green-50">
+                  <Typography variant="body1" className="text-[#4D4D4D]"><strong>3x</strong> R$ 10.196,66</Typography> 
+                  <Typography variant="subtitle2" className="text-[#AFAFAF]">Total: R$ 30.620,00</Typography> 
+                </Button>
+                <Button className="flex flex-col items-start min-h-20 border-2 border-[#E5E5E5] hover:border-2 hover:border-green-500 hover:bg-green-50">
+                  <Typography variant="body1" className="text-[#4D4D4D]"><strong>4x</strong> R$ 7.725,00</Typography> 
+                  <Typography variant="subtitle2" className="text-[#AFAFAF]">Total: R$ 30.900,00</Typography> 
+                  <Image
+                    className="relative z-0 w-full h-8 my-2 flex justify-center "
+                    src="/Rectangle 77.png"
+                    alt="R$300,00 reais de volta no seu Pix na hora"
+                    width={387}
+                    height={33}
+                  />
+                  <Typography className="absolute bottom-5 left-7  text-white text-xs">
+                    <strong>-3%</strong> de juros: Melhor opção de parcelamento
+                  </Typography> 
+                  
+                </Button>
+                <Button className="flex flex-col items-start min-h-20 border-2 border-[#E5E5E5] hover:border-2 hover:border-green-500 hover:bg-green-50">
+                  <Typography variant="body1" className="text-[#4D4D4D]"><strong>5x</strong> R$ 6.300,00</Typography> 
+                  <Typography variant="subtitle2" className="text-[#AFAFAF]">Total: R$ 31.500,00</Typography> 
+                </Button>
+                <Button className="flex flex-col items-start min-h-20 border-2 border-[#E5E5E5] hover:border-2 hover:border-green-500 hover:bg-green-50">  
+                  <Typography variant="body1" className="text-[#4D4D4D]"><strong>6x</strong> R$ 5.283,33</Typography> 
+                  <Typography variant="subtitle2" className="text-[#AFAFAF]">Total: R$ 31.699,00</Typography> 
+                </Button>
+                <Button className="flex flex-col items-start min-h-20 rounded-xl border-2 border-[#E5E5E5] hover:border-2 hover:border-green-500 hover:bg-green-50">
+                  <Typography variant="body1" className="text-[#4D4D4D]"><strong>7x</strong> R$ 4.542,85</Typography> 
+                  <Typography variant="subtitle2" className="text-[#AFAFAF]">Total: R$ 31.800,00</Typography> 
+                </Button>   
+              </ButtonGroup>
+            </Box>
+          </Box>
         </Box>
-      </Box>
+      </Box>        
     </Box>
   )
 }
