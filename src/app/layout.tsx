@@ -2,6 +2,8 @@ import "./globals.css";
 import Image from "next/image";
 import type { Metadata } from "next";
 import { Nunito } from "next/font/google";
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
 
 const nunito = Nunito({ subsets: ["latin"] });
 
@@ -27,6 +29,25 @@ export default function RootLayout({
           />
         </div>
         {children}
+        <Box className="flex justify-center items-end relative">
+            <footer className="flex my-12 space-x-1 ">
+              <Image
+                src="/icon-security.svg"
+                alt="icone seguro"
+                width={16}
+                height={18}
+              />
+              <Typography variant="body1" style={{ color: '#B2B2B2' }}>
+                Pagamento 100% seguro via:
+              </Typography>
+              <Image
+                src="/Logo-Woovi-Gray.svg"
+                alt="logo da empresa woovi"
+                width={57}
+                height={17}
+              />
+            </footer>
+        </Box>
       </body>
     </html>
   );
