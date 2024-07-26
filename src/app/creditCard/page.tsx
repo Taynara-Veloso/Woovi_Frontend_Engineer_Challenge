@@ -1,17 +1,16 @@
 import * as React from 'react';
-import Image from "next/image";
 import Box from '@mui/material/Box';
 import Icon from '@mui/material/Icon';
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
 import Divider from '@mui/material/Divider';
+import MenuItem from '@mui/material/MenuItem';
 import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
 import FormControl from '@mui/material/FormControl';
 import CircleOutlinedIcon from '@mui/icons-material/CircleOutlined';
-import CheckCircleRoundedIcon from '@mui/icons-material/CheckCircleRounded';
 import ExpandLessRoundedIcon from '@mui/icons-material/ExpandLessRounded';
-import MenuItem from '@mui/material/MenuItem';
+import CheckCircleRoundedIcon from '@mui/icons-material/CheckCircleRounded';
 
 const parcels = [
   {
@@ -70,7 +69,7 @@ export default function CreditCard() {
             ))}
           </TextField>
         </FormControl>
-        <Button variant="contained" className="w-full h-10 bg-blue-900 normal-case">Pagar</Button>
+        <Button variant="contained" className="w-full h-10 bg-[#133A6F] normal-case">Pagar</Button>
         <Box className="flex justify-center items-center px-10 my-6">
           <Typography variant='body2' className=" flex flex-col text-base text-center text-gray-400">
             Prazo de pagamento:
@@ -79,7 +78,7 @@ export default function CreditCard() {
         </Box>
         <Box className="space-y-3">
           <Stack className="flex flex-row gap-2 absolute items-center">
-            <Icon style={{ color: '#03D69D' }}><CheckCircleRoundedIcon className="align-baseline"/></Icon>
+            <Icon style={{ color: '#03D69D', backgroundColor: '#fff' }}><CheckCircleRoundedIcon className="align-baseline"/></Icon>
             <Stack className="flex flex-row gap-28 space-x-8">
               <Typography variant='subtitle1' className="font-semibold text-gray-700">1ª entrada no Pix</Typography> 
               <Typography variant='subtitle1' className="font-extrabold text-gray-900">R$ 15.300,00</Typography>
