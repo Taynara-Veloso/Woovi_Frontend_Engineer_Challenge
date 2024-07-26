@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Box from '@mui/material/Box';
 import Icon from '@mui/material/Icon';
 import Stack from '@mui/material/Stack';
@@ -24,9 +25,15 @@ export default function PixCreditCard() {
           border: 2,
           borderRadius: 2,
           borderColor: '#03D69D',
+          padding: 1,
         }}
       >
-        
+        <Image
+          src="/QrCode.png"
+          alt="qrCode"
+          width={340}
+          height={340}
+        />
       </Box>
       <Button variant="contained" className="w-80 h-10  bg-[#133A6F] normal-case">
         Clique para copiar QR CODE
@@ -64,7 +71,7 @@ export default function PixCreditCard() {
         </Box>
         <Box className="flex justify-between px-2">
           <Typography style={{ color: '#4D4D4D' }} variant="body1" className="font-semibold">CET: 0,5%</Typography>
-          <Typography style={{ color: '#4D4D4D' }} variant="body1" className="font-semibold">Total: R$ 31.500,00</Typography>
+          <Typography style={{ color: '#4D4D4D' }} variant="body1" className="font-semibold">Total: R$ 30.600,00</Typography>
         </Box>
         <Divider style={{ background: '#E5E5E5', border: '#E5E5E5' }} className="w-full h-1 rounded"></Divider>
         <Box className="flex justify-between px-2">
